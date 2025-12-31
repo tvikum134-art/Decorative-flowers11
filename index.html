@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DECORATIVE FLOWERS | Premium Bouquets</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body class="theme-default">
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-spa"></i> DECORATIVE <span>FLOWERS</span>
+            </a>
+            
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#products"><i class="fas fa-shopping-bag"></i> Bouquets</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <li>
+                        <button class="theme-toggle" id="themeToggle">
+                            <i class="fas fa-palette"></i> Theme
+                        </button>
+                        <div class="theme-options" id="themeOptions">
+                            <button class="theme-option active" data-theme="default">Default</button>
+                            <button class="theme-option" data-theme="light">Light</button>
+                            <button class="theme-option" data-theme="nature">Nature</button>
+                            <button class="theme-option" data-theme="royal">Royal</button>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="btn-admin" id="adminBtn">
+                            <i class="fas fa-user-shield"></i> Admin
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="cart-icon" id="cartIcon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bloom with Elegance</h1>
+                <p>Discover our exquisite collection of handcrafted flower bouquets, perfect for every occasion. Fresh flowers delivered with love.</p>
+                <div class="btn-container">
+                    <a href="#products" class="btn">Shop Now</a>
+                    <a href="#contact" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Signature Bouquets</h2>
+                <p>Each bouquet is carefully crafted with fresh, seasonal flowers to create the perfect arrangement.</p>
+            </div>
+            <div class="products-grid" id="productGrid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Form -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-container">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="Your Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" class="form-control" placeholder="Tell us about your requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                    <p style="text-align: center; margin-top: 1rem; color: #bbb; font-size: 0.9rem;">
+                        This form will save your contact details to our Google Sheet
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Admin Modal -->
+    <div class="admin-modal" id="adminModal">
+        <div class="admin-container">
+            <div class="admin-header">
+                <h2>Admin Dashboard</h2>
+                <button class="close-admin" id="closeAdmin">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="admin-content" id="adminLogin">
+                <div class="login-form">
+                    <h3>Admin Login</h3>
+                    <div class="form-group">
+                        <label for="adminPassword">Password</label>
+                        <input type="password" id="adminPassword" class="form-control" placeholder="Enter admin password" required>
+                    </div>
+                    <button class="submit-btn" id="loginBtn">Login</button>
+                </div>
+            </div>
+            
+            
+            <div class="admin-content" id="adminDashboard">
+                <div class="admin-stats">
+                    <div class="stat-card">
+                        <h4>Total Orders</h4>
+                        <p id="totalOrders">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Total Revenue</h4>
+                        <p id="totalRevenue">Rs. 0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Total Customers</h4>
+                        <p id="totalCustomers">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Messages</h4>
+                        <p id="totalMessages">0</p>
+                    </div>
+                </div>
+                
+                <h3 style="margin-bottom: 1rem; color: var(--primary);">Contact Form Submissions</h3>
+                <div style="overflow-x: auto;">
+                    <table class="admin-table" id="submissionsTable">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody id="submissionsBody">
+                            <!-- Data will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div style="margin-top: 2rem; text-align: center;">
+                    <a href="https://docs.google.com/spreadsheets/d/1pJYIOwZNc0kK32pP2JMg6H4VEQFHSWYXPf_xxYSLYCQ/edit?usp=sharing" 
+                       target="_blank" class="btn">
+                        <i class="fas fa-external-link-alt"></i> Open Google Sheet
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically loaded here -->
+        </div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cartTotal">Rs. 0</span>
+        </div>
+        <button class="checkout-btn" id="checkoutBtn">
+            <i class="fab fa-whatsapp"></i> Order via WhatsApp
+        </button>
+        <p style="text-align: center; margin-top: 1rem; color: #bbb; font-size: 0.9rem;">
+            Your order will be sent via WhatsApp with all selected items
+        </p>
+    </div>
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+94760276945?text=Hello%20DECORATIVE%20FLOWERS%2C%20I%20would%20like%20to%20inquire%20about%20your%20bouquets" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>DECORATIVE FLOWERS</h3>
+                    <p style="color: #bbb;">Creating beautiful floral arrangements that express emotions. Handcrafted bouquets for every special moment.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Shop Information</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Delivery Information</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Business Hours</h3>
+                    <ul class="footer-links">
+                        <li>Monday - Friday: 9am - 8pm</li>
+                        <li>Saturday: 10am - 6pm</li>
+                        <li>Sunday: 11am - 5pm</li>
+                        <li>Holidays: 12pm - 4pm</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 DECORATIVE FLOWERS. All rights reserved. | Handcrafted with <i class="fas fa-heart" style="color: var(--primary);"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link your external JavaScript file -->
+    <script src="script.js"></script>
+   
+</body>
+</html>
