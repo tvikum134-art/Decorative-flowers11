@@ -3,45 +3,45 @@
         const products = [
             {
                 id: 1,
-                name: "Eternal Romance Bouquet",
-                price: 500,
+                name: "1 flower",
+                price: 200,
                 image: "1.jpeg",
-                description: "A classic arrangement of red roses and white lilies, perfect for romantic occasions."
+                description: "with gliter RS:250/= and without gliter RS:200/="
             },
             {
                 id: 2,
-                name: "Spring Bliss Arrangement",
-                price: 500,
+                name: "3 flowers",
+                price: 400,
                 image: "2.jpeg",
-                description: "Bright sunflowers and yellow roses to bring cheer and happiness."
+                description: "with gliter RS:500/= and without gliter RS:400/="
             },
             {
                 id: 3,
-                name: "Lavender Dream Bundle",
-                price: 500,
+                name: "5 flowers",
+                price: 700,
                 image: "3.jpeg",
-                description: "Elegant purple orchids and lavender roses in a sophisticated arrangement."
+                description: "with gliter RS:800/= and without gliter RS:700/="
             },
             {
                 id: 4,
-                name: "Sunshine & Daisies",
-                price: 500,
+                name: "7 flowers",
+                price: 900,
                 image: "4.jpg",
-                description: "A vibrant mix of tulips, daisies, and peonies that captures spring essence."
+                description: "with gliter RS:1000/= and without gliter RS:900/="
             },
             {
                 id: 5,
-                name: "Royal Elegance Collection",
-                price: 500,
+                name: "10 flowers",
+                price: 1200,
                 image: "5.jpeg",
-                description: "White roses, lilies, and baby's breath for weddings and formal ceremonies."
+                description: "with gliter RS:1400/= and without gliter RS:1200/="
             },
             {
                 id: 6,
-                name: "Tropical Paradise Bouquet",
-                price: 500,
+                name: "15 flowers",
+                price: 1500,
                 image: "6.jpeg",
-                description: "Exotic tropical flowers for a bold and vibrant statement."
+                description: "with gliter RS:1700/= and without gliter RS:1500/="
             }
         ];
         
